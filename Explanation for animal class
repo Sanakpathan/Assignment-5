@@ -1,0 +1,16 @@
+The Animal class and its unit tests illustrate how object-oriented design interacts with testing.
+The class models properties (name, species, and canMakeSound) and includes logic in makeSound() that depends on the animal’s characteristics.
+
+Each test checks a different aspect of this behavior:
+
+constructor_setsPropertiesCorrectly() verifies the object’s state after construction.
+
+makeSound_returnsCorrectSoundForDog() and makeSound_returnsCorrectSoundForCat() ensure expected species-specific sounds.
+
+makeSound_returnsSilentMessageForSilentAnimal() tests a condition where the animal cannot make a sound.
+
+makeSound_returnsDefaultForUnknownSpecies() ensures that new or unknown species still behave predictably.
+
+Using @BeforeEach, test setup is shared across methods, ensuring consistent initialization without repetition.
+The combination of normal and edge-case tests demonstrates defensive programming and confirms the logic works for all scenarios.
+If someone later extends the Animal class or adds more species, running these tests will instantly show whether the changes maintain expected behavior
