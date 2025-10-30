@@ -1,0 +1,11 @@
+The Calculator class demonstrates simple arithmetic logic while the tests ensure reliability and predictable behavior.
+Each method performs a basic operation, but even such simple logic benefits from unit testing — for instance, division by zero must be handled gracefully.
+
+The add, subtract, and multiply tests use assertEquals() to verify that the computed result matches the expected integer result.
+
+The divide test uses a tolerance (0.0001) to handle potential floating-point rounding errors.
+
+The divide_byZero_throwsException() test uses assertThrows() to confirm that dividing by zero triggers an appropriate exception instead of silently failing or crashing.
+
+Together, these tests validate normal and error paths. They also serve as documentation—any developer can instantly see what behaviors are expected from this class.
+In practice, these tests make refactoring safe—if someone optimizes divide() later, failing tests will immediately flag any broken logic.
